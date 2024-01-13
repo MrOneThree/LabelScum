@@ -1,26 +1,26 @@
-import {x as e, K as o} from "./copilot-5xZabcKF.js";
+import {K as o, x as e} from "./copilot-5xZabcKF.js";
 
 const r = {
-    tagName: "vaadin-board-row",
-    description: e`You are styling selected row only, if you wish to style all rows of given board please pick
+  tagName: "vaadin-board-row",
+  description: e`You are styling selected row only, if you wish to style all rows of given board please pick
     <code>vaadin-board</code> instead.`,
-    notAccessibleDescription: e`If you wish to style all rows of current board please pick
+  notAccessibleDescription: e`If you wish to style all rows of current board please pick
     <code>vaadin-board</code> instead.`,
-    displayName: "Board Row",
-    elements: [
-        {
-            selector: "vaadin-board-row",
-            displayName: "Layout",
-            properties: [
-                o.backgroundColor,
-                o.borderColor,
-                o.borderWidth,
-                o.borderRadius,
-                o.padding
-            ]
-        }
-    ]
+  displayName: "Board Row",
+  elements: [
+    {
+      selector: "vaadin-board-row",
+      displayName: "Layout",
+      properties: [
+        o.backgroundColor,
+        o.borderColor,
+        o.borderWidth,
+        o.borderRadius,
+        o.padding
+      ]
+    }
+  ]
 };
 export {
-    r as default
+  r as default
 };

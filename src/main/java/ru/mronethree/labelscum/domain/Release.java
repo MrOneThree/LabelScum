@@ -2,15 +2,18 @@ package ru.mronethree.labelscum.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.HashSet;
-import java.util.LinkedHashSet;
 import java.util.Set;
-
+/**
+ * @author Kirill Popov
+ */
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,11 +26,11 @@ public class Release {
 
     @ManyToOne(cascade = CascadeType.DETACH, optional = false)
     @JoinColumn(name = "sub_label_id", nullable = false)
-    private SubLabel subLabel;
+    private Label label;
 
     @Column(nullable = false)
     @NotBlank
-    private String releaseCode;
+    private String catalog;
     @Column(nullable = false)
     @NotBlank
     private String releaseName;
@@ -35,7 +38,7 @@ public class Release {
     @NotNull
     private LocalDate releaseDate;
 
-    @OneToMany(mappedBy = "release", orphanRemoval = true)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "release", orphanRemoval = true)
     private Set<ReleaseArtists> releaseArtists = new HashSet<>();
 
     @OneToMany(mappedBy = "release", orphanRemoval = true)

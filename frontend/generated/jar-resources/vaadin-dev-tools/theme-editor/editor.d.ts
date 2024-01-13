@@ -33,8 +33,19 @@ export declare class ThemeEditor extends LitElement {
     private effectiveTheme;
     private markedAsUsed;
     private undoRedoListener;
+    static get styles(): import("lit").CSSResult;
     private handleClassNameChange;
+    activate(): void;
+    deactivate(): void;
     private pickComponent;
+    disconnectedCallback(): void;
+    render(): TemplateResult<1>;
+    renderMissingThemeNotice(): TemplateResult<1>;
+    renderPropertyList(): TemplateResult<1> | null;
+    handleShowComponent(): void;
+    handleOpenCss(event: OpenCssEvent): Promise<void>;
+    renderPicker(): TemplateResult<1>;
+    renderLocalClassNameEditor(): TemplateResult<1> | null;
     private handleScopeChange;
     private handlePropertyChange;
     private handleUndo;
@@ -44,28 +55,6 @@ export declare class ThemeEditor extends LitElement {
     private refreshTheme;
     private highlightElement;
     private removeElementHighlight;
-
-    static get styles(): import("lit").CSSResult;
-
-    activate(): void;
-
-    deactivate(): void;
-
-    disconnectedCallback(): void;
-
-    render(): TemplateResult<1>;
-
-    renderMissingThemeNotice(): TemplateResult<1>;
-
-    renderPropertyList(): TemplateResult<1> | null;
-
-    handleShowComponent(): void;
-
-    handleOpenCss(event: OpenCssEvent): Promise<void>;
-
-    renderPicker(): TemplateResult<1>;
-
-    renderLocalClassNameEditor(): TemplateResult<1> | null;
 
     protected firstUpdated(): void;
 

@@ -6,11 +6,14 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Currency;
-
+/**
+ * @author Kirill Popov
+ */
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,10 +26,14 @@ public class CurrencyToDate {
     @NotNull
     @Column(nullable = false)
     private LocalDate date;
-    @NotNull
-    @Column(nullable = false)
-    private Currency currency;
+
     @NotNull
     @Column(nullable = false)
     private BigDecimal rateToRub;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "currency", nullable = false)
+    @JdbcTypeCode(SqlTypes.NVARCHAR)
+    private Curr currency;
+
 }

@@ -8,14 +8,11 @@ import type {DragDropState} from './drag-drop/drag-drop-state';
  */
 export interface CopilotInterface {
     send(command: string, data: any): void;
-
     addPanel(panel: PanelConfiguration): void;
 }
-
 export interface MessageHandler {
     handleMessage(message: ServerMessage): boolean;
 }
-
 export interface ServerMessage {
     /**
      * The command
@@ -26,13 +23,11 @@ export interface ServerMessage {
      */
     data: any;
 }
-
 export declare enum Framework {
     Flow = 0,
     HillaLit = 1,
     HillaReact = 2
 }
-
 export interface CopilotPlugin {
     /**
      * Called once to initialize the plugin.
@@ -41,13 +36,11 @@ export interface CopilotPlugin {
      */
     init(copilotInterface: CopilotInterface): void;
 }
-
 export declare enum MessageType {
     INFORMATION = "information",
     WARNING = "warning",
     ERROR = "error"
 }
-
 export interface Message {
     id: number;
     type: MessageType;
@@ -58,7 +51,6 @@ export interface Message {
     dontShowAgain: boolean;
     deleted: boolean;
 }
-
 export interface PanelConfiguration {
     header: string;
     expanded: boolean;
@@ -77,7 +69,6 @@ export interface PanelConfiguration {
     };
     showOn?: Framework[];
 }
-
 export type Internals = {
     copilotUiState: CopilotUiState;
     copilotEventBus: CopilotEventBus;

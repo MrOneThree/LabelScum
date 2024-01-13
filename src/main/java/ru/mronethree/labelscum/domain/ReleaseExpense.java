@@ -1,7 +1,6 @@
 package ru.mronethree.labelscum.domain;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -12,7 +11,9 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.Objects;
-
+/**
+ * @author Kirill Popov
+ */
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -30,6 +31,7 @@ public class ReleaseExpense {
     @Column(nullable = false)
     @NotNull
     private BigDecimal amount;
+
     @Positive
     @Column(nullable = false)
     @NotNull
@@ -38,6 +40,10 @@ public class ReleaseExpense {
     @ManyToOne(cascade = CascadeType.REMOVE, optional = false)
     @JoinColumn(name = "release_id", nullable = false)
     private Release release;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "currency", nullable = false)
+    private Curr currency;
 
     @Override
     public boolean equals(Object o) {

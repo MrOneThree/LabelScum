@@ -1,11 +1,15 @@
 package ru.mronethree.labelscum.domain;
 
 import jakarta.persistence.*;
-import lombok.*;
-import org.hibernate.proxy.HibernateProxy;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Objects;
-
+/**
+ * @author Kirill Popov
+ */
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor

@@ -2,13 +2,16 @@ package ru.mronethree.labelscum.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.HashSet;
-import java.util.LinkedHashSet;
 import java.util.Set;
-
+/**
+ * @author Kirill Popov
+ */
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,7 +22,7 @@ public class Artist {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @NotBlank
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String alias;
     private String firstName;
     private String lastName;
