@@ -1,12 +1,6 @@
-import {
-    errorMessageProperties as t,
-    helperTextProperties as s,
-    inputFieldProperties as r,
-    labelProperties as a
-} from "./vaadin-text-field-GsooWDDF.js";
-import {L as e} from "./copilot-5xZabcKF.js";
-import {standardButtonProperties as i} from "./vaadin-button-ghqKrfmI.js";
-
+import { inputFieldProperties as r, labelProperties as a, helperTextProperties as s, errorMessageProperties as t } from "./vaadin-text-field-GsooWDDF.js";
+import { L as e } from "./copilot-5xZabcKF.js";
+import { standardButtonProperties as i } from "./vaadin-button-ghqKrfmI.js";
 const d = {
   tagName: "vaadin-password-field",
   displayName: "Password Field",

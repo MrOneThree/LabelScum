@@ -1,12 +1,6 @@
-import {K as o, O as a, P as r, Q as i} from "./copilot-5xZabcKF.js";
-import {
-    errorMessageProperties as n,
-    helperTextProperties as t,
-    inputFieldProperties as p,
-    labelProperties as l
-} from "./vaadin-text-field-GsooWDDF.js";
-import {standardButtonProperties as e} from "./vaadin-button-ghqKrfmI.js";
-
+import { K as o, O as a, P as r, Q as i } from "./copilot-5xZabcKF.js";
+import { inputFieldProperties as p, labelProperties as l, helperTextProperties as t, errorMessageProperties as n } from "./vaadin-text-field-GsooWDDF.js";
+import { standardButtonProperties as e } from "./vaadin-button-ghqKrfmI.js";
 const m = {
   tagName: "vaadin-login-overlay",
   displayName: "Login Overlay",

@@ -11,4 +11,4 @@ VALUES (4, 1);
 insert into release_distribution (music_distributor_id, release_id)
 VALUES (1, 1);
 insert into release_expense (amount, expense_type, quantity, release_id, currency)
-VALUES (8000, 'init', 1, 1, 'RUB');
+VALUES (4000, 'Реклама', 1, 1, 'RUB'), (4000, 'Дистрибьюция', 1, 1, 'RUB');

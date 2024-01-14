@@ -1,5 +1,4 @@
-import {K as r} from "./copilot-5xZabcKF.js";
-
+import { K as r } from "./copilot-5xZabcKF.js";
 const e = {
   tagName: "vaadin-progress-bar",
   displayName: "Progress Bar",

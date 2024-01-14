@@ -1,6 +1,5 @@
-import {J as e, K as o, L as a} from "./copilot-5xZabcKF.js";
-import {checkboxElement as i, checkedCheckboxElement as t} from "./vaadin-checkbox-BOYT2BAG.js";
-
+import { K as o, J as e, L as a } from "./copilot-5xZabcKF.js";
+import { checkboxElement as i, checkedCheckboxElement as t } from "./vaadin-checkbox-BOYT2BAG.js";
 const r = [
   e.textColor,
   e.fontSize,

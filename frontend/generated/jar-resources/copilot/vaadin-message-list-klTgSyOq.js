@@ -1,5 +1,4 @@
-import {J as a, K as e} from "./copilot-5xZabcKF.js";
-
+import { K as e, J as a } from "./copilot-5xZabcKF.js";
 const t = {
   tagName: "vaadin-message-list",
   displayName: "Message List",

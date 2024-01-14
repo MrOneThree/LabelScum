@@ -58,7 +58,35 @@ export class Flow {
         this.isActive = true;
         $wnd.Vaadin.connectionState.loadingStarted();
     }
-
+    loadingFinished() {
+        // Make Testbench know that server request has finished
+        this.isActive = false;
+        $wnd.Vaadin.connectionState.loadingFinished();
+        if ($wnd.Vaadin.listener) {
+            // Listeners registered, do not register again.
+            return;
+        }
+        $wnd.Vaadin.listener = {};
+        // Listen for click on router-links -> 'link' navigation trigger
+        // and on <a> nodes -> 'client' navigation trigger.
+        // Use capture phase to detect prevented / stopped events.
+        document.addEventListener('click', (_e) => {
+            if (_e.target) {
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
+                if (_e.target.hasAttribute('router-link')) {
+                    this.navigation = 'link';
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-ignore
+                }
+                else if (_e.composedPath().some((node) => node.nodeName === 'A')) {
+                    this.navigation = 'client';
+                }
+            }
+        }, {
+            capture: true
+        });
+    }
     get action() {
         // Return a function which is bound to the flow instance, thus we can use
         // the syntax `...serverSideRoutes` in vaadin-router.
@@ -91,38 +119,7 @@ export class Flow {
             return this.container;
         };
     }
-
-    loadingFinished() {
-        // Make Testbench know that server request has finished
-        this.isActive = false;
-        $wnd.Vaadin.connectionState.loadingFinished();
-        if ($wnd.Vaadin.listener) {
-            // Listeners registered, do not register again.
-            return;
-        }
-        $wnd.Vaadin.listener = {};
-        // Listen for click on router-links -> 'link' navigation trigger
-        // and on <a> nodes -> 'client' navigation trigger.
-        // Use capture phase to detect prevented / stopped events.
-        document.addEventListener('click', (_e) => {
-            if (_e.target) {
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                // @ts-ignore
-                if (_e.target.hasAttribute('router-link')) {
-                    this.navigation = 'link';
-                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                    // @ts-ignore
-                }
-                else if (_e.composedPath().some((node) => node.nodeName === 'A')) {
-                    this.navigation = 'client';
-                }
-            }
-        }, {
-            capture: true
-        });
-    }
     // Send a remote call to `JavaScriptBootstrapUI` to check
-
     // whether navigation has to be cancelled.
     async flowLeave(ctx, cmd) {
         // server -> server, viewing offline stub, or browser is offline

@@ -4,6 +4,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import ru.mronethree.labelscum.domain.Artist;
 import ru.mronethree.labelscum.domain.Release;
 import ru.mronethree.labelscum.repository.ReleaseRepository;
 
@@ -22,5 +24,11 @@ public class ReleaseService {
     public List<Release> fetchAll(){
         log.info("Fetching all releases");
         return repository.findAll();
+    }
+
+    @Transactional
+    public List<Release> fetchByArtistWithExpenses(Artist artist){
+        log.info("Fetching releases for: {}", artist.getAlias());
+        return repository.fetchByArtistWithExpenses(artist);
     }
 }

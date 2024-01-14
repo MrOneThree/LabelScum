@@ -1,5 +1,4 @@
-import {E as a, J as o, K as e, L as t, N as r} from "./copilot-5xZabcKF.js";
-
+import { E as a, N as r, K as e, L as t, J as o } from "./copilot-5xZabcKF.js";
 const c = {
   selector: "vaadin-checkbox",
   displayName: "Checkbox",

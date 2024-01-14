@@ -1,11 +1,5 @@
-import {
-    errorMessageProperties as p,
-    helperTextProperties as i,
-    inputFieldProperties as t,
-    labelProperties as o
-} from "./vaadin-text-field-GsooWDDF.js";
-import {J as e, K as r, L as a} from "./copilot-5xZabcKF.js";
-
+import { inputFieldProperties as t, labelProperties as o, helperTextProperties as i, errorMessageProperties as p } from "./vaadin-text-field-GsooWDDF.js";
+import { L as a, K as r, J as e } from "./copilot-5xZabcKF.js";
 const n = {
   tagName: "vaadin-date-picker",
   displayName: "Date Picker",

@@ -1,5 +1,4 @@
-import {J as o, K as r} from "./copilot-5xZabcKF.js";
-
+import { K as r, J as o } from "./copilot-5xZabcKF.js";
 const t = {
   tagName: "vaadin-rich-text-editor",
   displayName: "Rich Text Editor",

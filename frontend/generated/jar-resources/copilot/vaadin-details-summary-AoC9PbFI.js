@@ -1,5 +1,4 @@
-import {J as a, K as s, L as e} from "./copilot-5xZabcKF.js";
-
+import { J as a, K as s, L as e } from "./copilot-5xZabcKF.js";
 const i = {
   tagName: "vaadin-details-summary",
   displayName: "Details Summary",

@@ -1,5 +1,4 @@
-import {O as a} from "./copilot-5xZabcKF.js";
-
+import { O as a } from "./copilot-5xZabcKF.js";
 const t = {
   tagName: "vaadin-details",
   displayName: "Details",

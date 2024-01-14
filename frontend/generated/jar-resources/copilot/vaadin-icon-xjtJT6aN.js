@@ -1,5 +1,4 @@
-import {K as o, L as e} from "./copilot-5xZabcKF.js";
-
+import { L as e, K as o } from "./copilot-5xZabcKF.js";
 const a = {
   tagName: "vaadin-icon",
   displayName: "Icon",

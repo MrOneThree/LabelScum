@@ -1,6 +1,5 @@
-import {E as a, K as e, N as r, R as t} from "./copilot-5xZabcKF.js";
-import {inputFieldProperties as s} from "./vaadin-text-field-GsooWDDF.js";
-
+import { K as e, E as a, N as r, R as t } from "./copilot-5xZabcKF.js";
+import { inputFieldProperties as s } from "./vaadin-text-field-GsooWDDF.js";
 const p = {
   tagName: "vaadin-message-input",
   displayName: "Message Input",

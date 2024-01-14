@@ -1,12 +1,6 @@
-import {
-    errorMessageProperties as o,
-    helperTextProperties as i,
-    inputFieldProperties as t,
-    labelProperties as a
-} from "./vaadin-text-field-GsooWDDF.js";
-import {L as e} from "./copilot-5xZabcKF.js";
-import {standardButtonProperties as p} from "./vaadin-button-ghqKrfmI.js";
-
+import { inputFieldProperties as t, labelProperties as a, helperTextProperties as i, errorMessageProperties as o } from "./vaadin-text-field-GsooWDDF.js";
+import { L as e } from "./copilot-5xZabcKF.js";
+import { standardButtonProperties as p } from "./vaadin-button-ghqKrfmI.js";
 const d = {
   tagName: "vaadin-number-field",
   displayName: "Number Field",

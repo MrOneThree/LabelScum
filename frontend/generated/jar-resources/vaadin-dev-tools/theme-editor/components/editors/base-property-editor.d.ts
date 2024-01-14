@@ -43,10 +43,8 @@ export declare class TextInput extends LitElement {
     static get styles(): import("lit").CSSResult;
     value: string;
     showClearButton: boolean;
-
-    render(): TemplateResult<1>;
-
     protected update(changedProperties: PropertyValues): void;
+    render(): TemplateResult<1>;
     private handleInputChange;
     private handleClearClick;
 }

@@ -46,6 +46,10 @@ export declare class ThemeEditor extends LitElement {
     handleOpenCss(event: OpenCssEvent): Promise<void>;
     renderPicker(): TemplateResult<1>;
     renderLocalClassNameEditor(): TemplateResult<1> | null;
+
+    protected firstUpdated(): void;
+
+    protected update(changedProperties: PropertyValues): void;
     private handleScopeChange;
     private handlePropertyChange;
     private handleUndo;
@@ -55,8 +59,4 @@ export declare class ThemeEditor extends LitElement {
     private refreshTheme;
     private highlightElement;
     private removeElementHighlight;
-
-    protected firstUpdated(): void;
-
-    protected update(changedProperties: PropertyValues): void;
 }

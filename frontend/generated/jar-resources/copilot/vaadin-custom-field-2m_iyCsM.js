@@ -1,10 +1,5 @@
-import {
-    errorMessageProperties as a,
-    helperTextProperties as r,
-    labelProperties as e
-} from "./vaadin-text-field-GsooWDDF.js";
+import { labelProperties as e, helperTextProperties as r, errorMessageProperties as a } from "./vaadin-text-field-GsooWDDF.js";
 import "./copilot-5xZabcKF.js";
-
 const i = {
   tagName: "vaadin-custom-field",
   displayName: "Custom Field",

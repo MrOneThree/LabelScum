@@ -1,5 +1,4 @@
-import {E as i, J as a, K as e, N as n, R as s} from "./copilot-5xZabcKF.js";
-
+import { K as e, E as i, N as n, R as s, J as a } from "./copilot-5xZabcKF.js";
 const l = {
   tagName: "vaadin-menu-bar",
   displayName: "Menu Bar",

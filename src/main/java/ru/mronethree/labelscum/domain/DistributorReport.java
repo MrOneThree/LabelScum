@@ -18,6 +18,9 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Builder
+@Table(uniqueConstraints={
+        @UniqueConstraint(columnNames = {"date", "artist_id", "music_distributor_id"})
+})
 public class DistributorReport {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,5 +45,8 @@ public class DistributorReport {
     @Column(name = "curr", nullable = false)
     @JdbcTypeCode(SqlTypes.NVARCHAR)
     private Curr currency;
+//    @TODO: need more optimal solution
+    @Transient
+    private BigDecimal exchangeRateToRUBToDate;
 
 }

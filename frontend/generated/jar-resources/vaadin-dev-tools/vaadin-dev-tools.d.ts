@@ -1,12 +1,11 @@
 import 'construct-style-sheets-polyfill';
-import {LitElement, PropertyValueMap, TemplateResult} from 'lit';
-import {Product} from './License';
-import {ConnectionStatus} from './connection';
+import { LitElement, PropertyValueMap, TemplateResult } from 'lit';
+import { Product } from './License';
+import { ConnectionStatus } from './connection';
 import './theme-editor/editor';
-import {ThemeEditorState} from './theme-editor/model';
+import { ThemeEditorState } from './theme-editor/model';
 import './vaadin-dev-tools-info';
 import './vaadin-dev-tools-log';
-
 /**
  * Plugin API for the dev tools window.
  */
@@ -147,11 +146,11 @@ export declare class VaadinDevTools extends LitElement {
     getStatusColor(status: ConnectionStatus | undefined): "none" | "var(--dev-tools-green-color)" | "var(--dev-tools-grey-color)" | "var(--dev-tools-yellow-hsl)" | "var(--dev-tools-red-color)";
     renderMessage(messageObject: Message): TemplateResult<1>;
     render(): TemplateResult<1>;
+    protected updated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void;
 
     static notificationDismissed(persistentId: string): boolean;
-    renderCode(): TemplateResult<1>;
 
-    protected updated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void;
+    renderCode(): TemplateResult<1>;
     setJavaLiveReloadActive(active: boolean): void;
     renderThemeEditor(): TemplateResult<1>;
     toggleFeatureFlag(e: Event, feature: Feature): void;

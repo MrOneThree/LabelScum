@@ -1,5 +1,4 @@
-import {O as a, P as t} from "./copilot-5xZabcKF.js";
-
+import { O as a, P as t } from "./copilot-5xZabcKF.js";
 const e = {
   tagName: "vaadin-notification",
   displayName: "Notification",

@@ -1,5 +1,4 @@
-import {O as e, P as a} from "./copilot-5xZabcKF.js";
-
+import { O as e, P as a } from "./copilot-5xZabcKF.js";
 const n = {
   tagName: "vaadin-cookie-consent",
   displayName: "Cookie Consent",

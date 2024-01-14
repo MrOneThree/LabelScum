@@ -1,10 +1,5 @@
-import {E as i, J as r, K as e, L as p, N as d} from "./copilot-5xZabcKF.js";
-import {
-    errorMessageProperties as n,
-    helperTextProperties as l,
-    labelProperties as s
-} from "./vaadin-text-field-GsooWDDF.js";
-
+import { K as e, E as i, N as d, L as p, J as r } from "./copilot-5xZabcKF.js";
+import { labelProperties as s, helperTextProperties as l, errorMessageProperties as n } from "./vaadin-text-field-GsooWDDF.js";
 const c = {
   tagName: "vaadin-radio-group",
   displayName: "Radio Button Group",

@@ -1,12 +1,6 @@
-import {O as e, P as r, Q as o} from "./copilot-5xZabcKF.js";
-import {
-    errorMessageProperties as s,
-    helperTextProperties as p,
-    inputFieldProperties as i,
-    labelProperties as t
-} from "./vaadin-text-field-GsooWDDF.js";
-import {standardButtonProperties as a} from "./vaadin-button-ghqKrfmI.js";
-
+import { O as e, P as r, Q as o } from "./copilot-5xZabcKF.js";
+import { inputFieldProperties as i, labelProperties as t, helperTextProperties as p, errorMessageProperties as s } from "./vaadin-text-field-GsooWDDF.js";
+import { standardButtonProperties as a } from "./vaadin-button-ghqKrfmI.js";
 const m = {
   tagName: "vaadin-login-form",
   displayName: "Login",

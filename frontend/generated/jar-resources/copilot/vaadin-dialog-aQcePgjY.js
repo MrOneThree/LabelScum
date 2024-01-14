@@ -1,5 +1,4 @@
-import {O as a, P as e} from "./copilot-5xZabcKF.js";
-
+import { O as a, P as e } from "./copilot-5xZabcKF.js";
 const o = {
   tagName: "vaadin-dialog",
   displayName: "Dialog",

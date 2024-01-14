@@ -77,7 +77,7 @@ public class DistributorReportsView extends VerticalLayout {
 
     private Component getDRGrid() {
         Grid<DistributorReport> grid = new Grid<>(DistributorReport.class, false);
-        grid.addColumn(DistributorReport::getId).setHeader("ID");
+        grid.addColumn(r -> r.getMusicDistributor().getName()).setHeader("Дистрибьтор");
         grid.addColumn(DistributorReport::getDate).setHeader("Дата отчета");
         grid.addColumn(r -> r.getArtist().getAlias()).setHeader("Артист");
         grid.addColumn(DistributorReport::getAmount).setHeader("Сумма");
@@ -132,7 +132,7 @@ public class DistributorReportsView extends VerticalLayout {
             if (!distributorSelect.isEmpty() && !currSelect.isEmpty() && !datePicker.isEmpty() && Objects.nonNull(filestream)){
                 List<DistributorReport> reports =
                         csvParsingUtils.parseDistributorReport(filestream, distributorSelect.getValue(), datePicker.getValue(), currSelect.getValue());
-                reports.forEach(reportService::save);
+                reportService.saveBatch(reports);
                 dialog.close();
                 this.update();
             }

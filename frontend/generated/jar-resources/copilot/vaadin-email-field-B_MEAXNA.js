@@ -1,12 +1,6 @@
-import {
-    errorMessageProperties as i,
-    helperTextProperties as r,
-    inputFieldProperties as e,
-    labelProperties as a
-} from "./vaadin-text-field-GsooWDDF.js";
-import {standardButtonProperties as t} from "./vaadin-button-ghqKrfmI.js";
+import { inputFieldProperties as e, labelProperties as a, helperTextProperties as r, errorMessageProperties as i } from "./vaadin-text-field-GsooWDDF.js";
+import { standardButtonProperties as t } from "./vaadin-button-ghqKrfmI.js";
 import "./copilot-5xZabcKF.js";
-
 const o = {
   tagName: "vaadin-email-field",
   displayName: "Email Field",

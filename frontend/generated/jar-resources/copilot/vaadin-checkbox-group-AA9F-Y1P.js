@@ -1,17 +1,6 @@
-import {K as e} from "./copilot-5xZabcKF.js";
-import {
-    errorMessageProperties as m,
-    helperTextProperties as i,
-    labelProperties as d
-} from "./vaadin-text-field-GsooWDDF.js";
-import {
-    checkboxElement as t,
-    checkedCheckboxElement as c,
-    checkmarkElement as l,
-    hostElement as a,
-    labelElement as s
-} from "./vaadin-checkbox-BOYT2BAG.js";
-
+import { K as e } from "./copilot-5xZabcKF.js";
+import { labelProperties as d, helperTextProperties as i, errorMessageProperties as m } from "./vaadin-text-field-GsooWDDF.js";
+import { hostElement as a, checkboxElement as t, checkedCheckboxElement as c, checkmarkElement as l, labelElement as s } from "./vaadin-checkbox-BOYT2BAG.js";
 const k = {
   tagName: "vaadin-checkbox-group",
   displayName: "Checkbox Group",

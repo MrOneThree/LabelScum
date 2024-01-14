@@ -1,5 +1,4 @@
-import {K as e, R as o} from "./copilot-5xZabcKF.js";
-
+import { K as e, R as o } from "./copilot-5xZabcKF.js";
 const a = {
   tagName: "vaadin-list-box",
   displayName: "List Box",

@@ -1,8 +1,7 @@
-import {E as t, J as o, K as r, L as a, N as d} from "./copilot-5xZabcKF.js";
-import {checkboxElement as p, checkedCheckboxElement as l} from "./vaadin-checkbox-BOYT2BAG.js";
-import {cellProperties as e} from "./vaadin-grid-CUkOvGp5.js";
-import {inputFieldProperties as i} from "./vaadin-text-field-GsooWDDF.js";
-
+import { K as r, J as o, L as a, E as t, N as d } from "./copilot-5xZabcKF.js";
+import { checkboxElement as p, checkedCheckboxElement as l } from "./vaadin-checkbox-BOYT2BAG.js";
+import { cellProperties as e } from "./vaadin-grid-CUkOvGp5.js";
+import { inputFieldProperties as i } from "./vaadin-text-field-GsooWDDF.js";
 const v = {
   tagName: "vaadin-grid-pro",
   displayName: "Grid Pro",

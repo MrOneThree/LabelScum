@@ -1,5 +1,4 @@
-import {K as a} from "./copilot-5xZabcKF.js";
-
+import { K as a } from "./copilot-5xZabcKF.js";
 const r = {
   tagName: "vaadin-form-layout",
   displayName: "Form Layout",

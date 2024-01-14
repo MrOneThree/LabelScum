@@ -1,5 +1,4 @@
-import {K as a} from "./copilot-5xZabcKF.js";
-
+import { K as a } from "./copilot-5xZabcKF.js";
 const o = {
   tagName: "vaadin-map",
   displayName: "Map",

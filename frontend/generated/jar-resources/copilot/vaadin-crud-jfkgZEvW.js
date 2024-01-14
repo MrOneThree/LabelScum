@@ -1,5 +1,4 @@
-import {K as r, L as o} from "./copilot-5xZabcKF.js";
-
+import { K as r, L as o } from "./copilot-5xZabcKF.js";
 const d = {
   tagName: "vaadin-crud",
   displayName: "CRUD",

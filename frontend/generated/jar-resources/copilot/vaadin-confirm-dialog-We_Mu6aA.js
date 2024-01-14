@@ -1,6 +1,5 @@
-import {O as a, P as e} from "./copilot-5xZabcKF.js";
-import {standardButtonProperties as o} from "./vaadin-button-ghqKrfmI.js";
-
+import { O as a, P as e } from "./copilot-5xZabcKF.js";
+import { standardButtonProperties as o } from "./vaadin-button-ghqKrfmI.js";
 const i = {
   tagName: "vaadin-confirm-dialog",
   displayName: "Confirm Dialog",

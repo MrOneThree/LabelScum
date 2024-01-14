@@ -1,11 +1,5 @@
-import {
-    errorMessageProperties as p,
-    helperTextProperties as s,
-    inputFieldProperties as t,
-    labelProperties as i
-} from "./vaadin-text-field-GsooWDDF.js";
-import {J as r, K as e, L as o} from "./copilot-5xZabcKF.js";
-
+import { inputFieldProperties as t, labelProperties as i, helperTextProperties as s, errorMessageProperties as p } from "./vaadin-text-field-GsooWDDF.js";
+import { L as o, K as e, J as r } from "./copilot-5xZabcKF.js";
 const b = {
   tagName: "vaadin-combo-box",
   displayName: "Combo Box",

@@ -36,29 +36,9 @@ class b {
   get properties() {
     return Object.values(this._properties);
   }
-
-  static combine(...e) {
-    if (e.length < 2)
-      throw new Error("Must provide at least two themes");
-    const s = new b(e[0].metadata);
-    return e.forEach((i) => s.addPropertyValues(i.properties)), s;
-  }
-
-  static fromServerRules(e, s, i) {
-    const o = new b(e);
-    return e.elements.forEach((r) => {
-      const a = M(r, s), l = i.find((c) => c.selector === a.replace(/ > /g, ">"));
-      l && r.properties.forEach((c) => {
-        const d = l.properties[c.propertyName];
-        d && o.updatePropertyValue(r.selector, c.propertyName, d, !0);
-      });
-    }), o;
-  }
-
   getPropertyValue(e, s) {
     return this._properties[ee(e, s)] || null;
   }
-
   updatePropertyValue(e, s, i, o) {
     if (!i) {
       delete this._properties[ee(e, s)];
@@ -72,15 +52,29 @@ class b {
       modified: o || !1
     }, this._properties[ee(e, s)] = r);
   }
-
   addPropertyValues(e) {
     e.forEach((s) => {
       this.updatePropertyValue(s.elementSelector, s.propertyName, s.value, s.modified);
     });
   }
-
   getPropertyValuesForElement(e) {
     return this.properties.filter((s) => s.elementSelector === e);
+  }
+  static combine(...e) {
+    if (e.length < 2)
+      throw new Error("Must provide at least two themes");
+    const s = new b(e[0].metadata);
+    return e.forEach((i) => s.addPropertyValues(i.properties)), s;
+  }
+  static fromServerRules(e, s, i) {
+    const o = new b(e);
+    return e.elements.forEach((r) => {
+      const a = M(r, s), l = i.find((c) => c.selector === a.replace(/ > /g, ">"));
+      l && r.properties.forEach((c) => {
+        const d = l.properties[c.propertyName];
+        d && o.updatePropertyValue(r.selector, c.propertyName, d, !0);
+      });
+    }), o;
   }
 }
 function M(t, e) {
@@ -278,12 +272,6 @@ class Ye {
       allowRedo: this.allowRedo
     };
   }
-
-  // Only intended to be used for testing
-  static clear() {
-    p.entries = [], p.index = -1;
-  }
-
   push(e, s, i) {
     const o = {
       requestId: e,
@@ -298,7 +286,6 @@ class Ye {
       }
     return this.allowedActions;
   }
-
   async undo() {
     if (!this.allowUndo)
       return this.allowedActions;
@@ -311,7 +298,6 @@ class Ye {
     }
     return this.allowedActions;
   }
-
   async redo() {
     if (!this.allowRedo)
       return this.allowedActions;
@@ -323,6 +309,10 @@ class Ye {
       H("Redo failed", s);
     }
     return this.allowedActions;
+  }
+  // Only intended to be used for testing
+  static clear() {
+    p.entries = [], p.index = -1;
   }
 }
 var Qe = Object.defineProperty, et = Object.getOwnPropertyDescriptor, x = (t, e, s, i) => {
@@ -1117,35 +1107,29 @@ class St extends he {
 }
 const Et = ':host{display:flex;flex-direction:column;position:relative;width:200px;height:200px;user-select:none;-webkit-user-select:none;cursor:default}:host([hidden]){display:none!important}[role=slider]{position:relative;touch-action:none;user-select:none;-webkit-user-select:none;outline:0}[role=slider]:last-child{border-radius:0 0 8px 8px}[part$=pointer]{position:absolute;z-index:1;box-sizing:border-box;width:28px;height:28px;display:flex;place-content:center center;transform:translate(-50%,-50%);background-color:#fff;border:2px solid #fff;border-radius:50%;box-shadow:0 2px 4px rgba(0,0,0,.2)}[part$=pointer]::after{content:"";width:100%;height:100%;border-radius:inherit;background-color:currentColor}[role=slider]:focus [part$=pointer]{transform:translate(-50%,-50%) scale(1.1)}', Pt = "[part=hue]{flex:0 0 24px;background:linear-gradient(to right,red 0,#ff0 17%,#0f0 33%,#0ff 50%,#00f 67%,#f0f 83%,red 100%)}[part=hue-pointer]{top:50%;z-index:2}", Nt = "[part=saturation]{flex-grow:1;border-color:transparent;border-bottom:12px solid #000;border-radius:8px 8px 0 0;background-image:linear-gradient(to top,#000,transparent),linear-gradient(to right,#fff,rgba(255,255,255,0));box-shadow:inset 0 0 0 1px rgba(0,0,0,.05)}[part=saturation-pointer]{z-index:3}", q = Symbol("same"), se = Symbol("color"), Se = Symbol("hsva"), oe = Symbol("update"), Ee = Symbol("parts"), W = Symbol("css"), G = Symbol("sliders");
 let Tt = class extends HTMLElement {
-  constructor() {
-    super();
-    const e = ze(`<style>${this[W].join("")}</style>`), s = this.attachShadow({ mode: "open" });
-    s.appendChild(e.content.cloneNode(!0)), s.addEventListener("move", this), this[Ee] = this[G].map((i) => new i(s));
-  }
-
   static get observedAttributes() {
     return ["color"];
   }
-
   get [W]() {
     return [Et, Pt, Nt];
   }
-
   get [G]() {
     return [St, kt];
   }
-
   get color() {
     return this[se];
   }
-
   set color(e) {
     if (!this[q](e)) {
       const s = this.colorModel.toHsva(e);
       this[oe](s), this[se] = e;
     }
   }
-
+  constructor() {
+    super();
+    const e = ze(`<style>${this[W].join("")}</style>`), s = this.attachShadow({ mode: "open" });
+    s.appendChild(e.content.cloneNode(!0)), s.addEventListener("move", this), this[Ee] = this[G].map((i) => new i(s));
+  }
   connectedCallback() {
     if (this.hasOwnProperty("color")) {
       const e = this.color;
@@ -1251,10 +1235,6 @@ const ie = {
     });
   });
 }), Lt = (t) => class extends t {
-  constructor() {
-    super(), this.__onScroll = this.__onScroll.bind(this), this._updatePosition = this._updatePosition.bind(this);
-  }
-
   static get properties() {
     return {
       /**
@@ -1328,14 +1308,15 @@ const ie = {
       }
     };
   }
-
   static get observers() {
     return [
       "__positionSettingsChanged(horizontalAlign, verticalAlign, noHorizontalOverlap, noVerticalOverlap, requiredVerticalSpace)",
       "__overlayOpenedChanged(opened, positionTarget)"
     ];
   }
-
+  constructor() {
+    super(), this.__onScroll = this.__onScroll.bind(this), this._updatePosition = this._updatePosition.bind(this);
+  }
   /** @protected */
   connectedCallback() {
     super.connectedCallback(), this.opened && this.__addUpdatePositionEventListeners();
